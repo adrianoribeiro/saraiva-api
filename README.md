@@ -35,3 +35,4 @@ Rodar o comando:
 ```
 mvn spring-boot:run
 ```
+Service e Controlle: 100% de cobertura.
