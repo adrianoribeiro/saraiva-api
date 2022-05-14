@@ -1,7 +1,7 @@
 # saraiva-api
-API que coleta informações de livros da Saraiva e armazena localmente num banco MySQL.
+API that extracts book information from the Saraiva API and stores into a MySQL locally.
 
-### Tecnologias:
+### Tech/Frameworks:
 * Spring Boot (json/restful) 
 * Spring data;
 * Maven;
@@ -9,7 +9,7 @@ API que coleta informações de livros da Saraiva e armazena localmente num banc
 * JUnit;
 * Postman;
 
-Requisições:
+Request samples:
 ```
 curl -X POST -F sku=9731891 http://localhost:8080/book/
 curl http://localhost:8080/book/9731891
@@ -20,19 +20,14 @@ curl http://localhost:8080/book/?name=Origem
 curl -X DELETE http://localhost:8080/book/9731891
 ```
 
-Restrições:
-Trata duplicidade;
-Informa caso não existe;
-
-### Sugestão para rodar
-Criar o banco MySQL e editar o arquivo application.properties para apontar para seu banco:
+### To run
+#### Go to the application.properties and set your database settings:
 ```
   spring.datasource.url=jdbc:mysql://localhost:3306/db_saraiva
   spring.datasource.username=root
   spring.datasource.password=toor
 ```
-Rodar o comando: 
+### Run the command: 
 ```
-mvn spring-boot:run
+$ mvn spring-boot:run
 ```
-Service e Controlle: 100% de cobertura.
